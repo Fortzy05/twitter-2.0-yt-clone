@@ -1,9 +1,15 @@
-import React from 'react'
-
-function SidebarRow() {
+import React, { SVGProps } from 'react'
+interface Props {
+    Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element
+    title: string;
+};
+function SidebarRow({Icon, title}: Props) {
   return (
-    <div>SidebarRow</div>
-  )
+    <div className="flex items-center space-x-2 px-4 py-3 rounded-full transition-all duration-200  hover:bg-gray-100">
+      <Icon className="h-6 w-6" />
+      <p>{title}</p>
+    </div>
+  );
 }
 
 export default SidebarRow
