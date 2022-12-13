@@ -1,18 +1,12 @@
 export default {
-  name: "tweet",
-  title: "Tweet",
+  name: "Comment",
+  title: "Comment",
   type: "document",
   fields: [
     {
-      name: "text",
-      title: "Text in Tweet",
+      name: "Comment",
+      title: "Comment",
       type: "string",
-    },
-    {
-      name: "blockTweet",
-      title: "Block Tweet",
-      description: "ADMIN Control: Toggle if Tweet is deemed inappropriate",
-      type: "boolean",
     },
     {
       name: "username",
@@ -25,9 +19,11 @@ export default {
       type: "string",
     },
     {
-      name: "image",
-      title: "Tweet Image",
-      type: "string",
-    },
+      name: "tweet",
+      title: "Tweet",
+      description: "Reference to the tweet this comment belongs to",
+      type: "reference",
+      to: { type: "tweet" },
+    }
   ],
 };

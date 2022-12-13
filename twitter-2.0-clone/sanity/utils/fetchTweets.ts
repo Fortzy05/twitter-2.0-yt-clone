@@ -1,0 +1,1 @@
+export const fetchTweets = async (query: string) => {

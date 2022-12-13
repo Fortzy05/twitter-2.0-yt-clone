@@ -21,4 +21,11 @@ const Home: NextPage = () => {
 
 export default Home;
 
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const tweets = await fetchTweets("http://localhost:3000/api/tweets").then((res) =>
+  return {
+props: {
 
+}
+  }
+}
