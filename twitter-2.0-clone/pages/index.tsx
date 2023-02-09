@@ -3,8 +3,14 @@ import Head from "next/head";
 import Feed from "../components/Feed";
 import SideBar from "../components/SideBar";
 import Widgets from "../components/Widgets";
+// import { fetchTweets } from "../sanity/utils/fetchTweets";
+// import { Tweet } from "../sanity/typings";
 
-const Home: NextPage = () => {
+// interface Props {
+//   tweets: Tweet[];
+// }
+
+const Home = () => {
   return (
     <div className="lg:max-w-6xl mx-auto max-h-screen overflow-hidden">
       <Head>
@@ -21,11 +27,11 @@ const Home: NextPage = () => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const tweets = await fetchTweets("http://localhost:3000/api/tweets").then((res) =>
-  return {
-props: {
-
-}
-  }
-}
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const tweets = await fetchTweets();
+//   return {
+//     props: {
+//       tweets,
+//     },
+//   };
+// };
