@@ -27,11 +27,11 @@ const Home = () => {
 
 export default Home;
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const tweets = await fetchTweets();
-//   return {
-//     props: {
-//       tweets,
-//     },
-//   };
-// };
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const tweets = await fetchTweets();
+  return {
+    props: {
+      tweets,
+    },
+  };
+};
