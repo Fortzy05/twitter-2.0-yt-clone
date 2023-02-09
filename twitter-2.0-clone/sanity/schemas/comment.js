@@ -1,6 +1,6 @@
 export default {
   name: 'comment',
-  title: 'comment',
+  title: 'Comment',
   type: 'document',
   fields: [
     {
